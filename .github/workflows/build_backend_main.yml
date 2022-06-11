@@ -33,12 +33,12 @@ jobs:
         
 
     - name: Coverage report
-      working-directory: ./backend
+      working-directory: /backend
       run: |
         pip install coverage
         coverage run manage.py test
         coverage report
     - name: Django Testing
-      working-directory: ./backend    
+      working-directory: /backend    
       run: |
         python3 manage.py test
