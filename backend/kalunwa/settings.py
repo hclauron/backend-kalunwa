@@ -153,7 +153,7 @@ MEDIA_URL = '/media/'
 CORS_ORIGIN_WHITELIST = (
 'http://localhost:4200', # angular
 'http://localhost:8000',
-'https://yellow-sky-058b19a00.1.azurestaticapps.net/'
+'https://yellow-sky-058b19a00.1.azurestaticapps.net'
 )
 
 
@@ -208,7 +208,7 @@ SIMPLE_JWT = {
 
 #Static files (CSS, JavaScript, Images)
 
-STATIC_URL = '/static'
+STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
