@@ -25,7 +25,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies  
-      working-directory: ./backend/kalunwa
+      working-directory: ./backend
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
