@@ -35,6 +35,7 @@ jobs:
     - name: Coverage report
       working-directory: ./backend
       run: |
+        echo "::notice file=requirements.txt"
         pip install coverage
         coverage run manage.py test
         coverage report
