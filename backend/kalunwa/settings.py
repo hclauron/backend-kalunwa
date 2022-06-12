@@ -156,7 +156,6 @@ MEDIA_URL = '/media/'
 CORS_ORIGIN_WHITELIST = (
 'http://localhost:4200', # angular
 'http://localhost:8000',
-'https://yellow-sky-058b19a00.1.azurestaticapps.net'
 )
 
 
@@ -208,6 +207,4 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(hours=2),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),    
 }
-
-#Static files (CSS, JavaScript, Images)
 

@@ -21,7 +21,6 @@ from .filters import (
     CabinOfficerCategoryFilter,
     ExcludeIDFilter,
 )
-
     
 class EventViewSet(viewsets.ModelViewSet):
     model = Event
