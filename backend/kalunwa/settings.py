@@ -21,14 +21,14 @@ from datetime import timedelta
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3@f(id^#8khy0r-zx#r@hi#cey9028avo2b5d#(k3%5)pxg5ks'
+SECRET_KEY = os.environment['SECRET_KEY']
+#'django-insecure-3@f(id^#8khy0r-zx#r@hi#cey9028avo2b5d#(k3%5)pxg5ks'
 # SECRET_KEY = config("SECRET_KEY") -> prod
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['backend-kalunwa.azurewebsites.net']
-
 
 # Application definition
 
