@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-3@f(id^#8khy0r-zx#r@hi#cey9028avo2b5d#(k3%5)pxg5ks
 # SECRET_KEY = config("SECRET_KEY") -> prod
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = FALSE
+DEBUG = False
 
-ALLOWED_HOSTS = ['kalunwa-backend.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['kalunwa-backend.azurewebsites.net']
 
 
 # Application definition
@@ -137,7 +137,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-#STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -154,7 +157,6 @@ MEDIA_URL = '/media/'
 CORS_ORIGIN_WHITELIST = (
 'http://localhost:4200', # angular
 'http://localhost:8000',
-'https://kalunwa-backend.azurewebsites.net'
 )
 
 
@@ -207,7 +209,3 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),    
 }
 
-STATIC_URL = '/static/'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
