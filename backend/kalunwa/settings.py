@@ -152,6 +152,7 @@ MEDIA_URL = '/media/'
 CORS_ORIGIN_WHITELIST = (
 'http://localhost:4200', # angular
 'http://localhost:8000',
+'https://kalunwa-backend.azurewebsites.net'
 )
 
 
