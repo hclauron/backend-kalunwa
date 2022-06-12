@@ -7,6 +7,9 @@ from .views import (AnnouncementViewSet, CabinOfficerViewSet, CampLeaderViewSet,
 
 router = DefaultRouter()
 
+from .import views
+
+
 # for complete detail
 router.register(r'gallery', ImageViewSet, basename='image')
 router.register(r'jumbotrons', JumbotronViewSet, basename='jumbotron')

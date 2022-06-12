@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from kalunwa.users.views import CustomObtainTokenPairView
 
+
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
     TokenVerifyView,
@@ -28,7 +29,6 @@ from rest_framework_simplejwt.views import (
 # add /api to access api's
 
 urlpatterns = [
-    path('site/', include('website.urls')),
     path('admin/', admin.site.urls), 
     path('api/', include(
         [
