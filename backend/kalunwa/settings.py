@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3@f(id^#8khy0r-zx#r@hi#cey9028avo2b5d#(k3%5)pxg5ks
 # SECRET_KEY = config("SECRET_KEY") -> prod
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['backend-kalunwa.azurewebsites.net']
 
@@ -152,11 +152,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # plan to change api to cms/admin_
 MEDIA_URL = '/media/'
 
 # CORS
+'''
 CORS_ORIGIN_WHITELIST = (
 'http://localhost:4200', # angular
 'http://localhost:8000',
+'https://backend-kalunwa.azurewebsites.net'
 )
-
+'''
+CORS_ALLOW_ALL_ORIGINS = True
 
 # authentication
 AUTH_USER_MODEL = 'users.User'
